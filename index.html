@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IzyCréa — la boîte à outils des consultants création d'entreprise</title>
+  <meta name="description" content="Base de connaissances sourcée, business model canvas, dossier de présentation et prévisionnels pour les consultants qui accompagnent des créateurs d'entreprise.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b5bf6'/%3E%3Cstop offset='1' stop-color='%2314b8a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M20 44V26M20 18v1M30 26h14L30 44h14' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="top" id="top">
+    <div class="wrap top-in">
+      <a href="#/" class="logo" aria-label="IzyCréa, accueil">
+        <span class="logo-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b5bf6"/><stop offset="1" stop-color="#14b8a6"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#lg)"/><path d="M20 44V26M20 18v1M30 26h14L30 44h14" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>
+        <span class="logo-txt">izy<b>créa</b></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#/base" data-nav="base">Base</a>
+        <a href="#/outils" data-nav="outils">Outils</a>
+        <a href="#/projecteurs" data-nav="projecteurs">Dossiers métiers</a>
+        <a href="#/ressources" data-nav="ressources">Ressources</a>
+      </nav>
+      <button class="search-btn" id="openSearch" aria-label="Rechercher"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Rechercher</span><kbd>/</kbd></button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <div>
+        <span class="logo-txt small">izy<b>créa</b></span>
+        <p>La boîte à outils des consultants qui accompagnent des créateurs d'entreprise. Informations générales, vérifiées sur les sources officielles et datées : elles ne remplacent pas l'avis d'un expert-comptable, d'un avocat ou de France Travail.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#/base">Base de connaissances</a>
+        <a href="#/outils">Outils</a>
+        <a href="#/a-propos">À propos & mentions</a>
+      </div>
+      <p class="foot-note">Aucune donnée saisie dans les outils ne quitte votre navigateur.</p>
+    </div>
+  </footer>
+
+  <div class="palette" id="palette" hidden>
+    <div class="palette-box" role="dialog" aria-label="Recherche">
+      <div class="palette-in"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="paletteInput" placeholder="ARCE, Acre, seuils micro, congé de reclassement…" autocomplete="off"><kbd>Échap</kbd></div>
+      <div class="palette-res" id="paletteRes"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="fiches.js"></script>
+  <script src="ressources.js"></script>
+  <script src="xlsx.full.min.js" defer></script>
+  <script src="app.js"></script>
+  <script src="tools.js"></script>
+</body>
+</html>
